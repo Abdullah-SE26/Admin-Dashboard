@@ -1,0 +1,9 @@
+.calendar {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  height: 320px;
+  margin: auto;
+  overflow: hidden;
+}
+
