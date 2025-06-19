@@ -1,4 +1,3 @@
-/* === BASE STYLES === */
 body {
   padding: 0;
   margin: 0;
@@ -7,7 +6,6 @@ body {
   height: 100%;
 }
 
-/* === GRID LAYOUT === */
 .layout {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -17,6 +15,7 @@ body {
     "sidebar main";
 }
 
+/* ====================== NAVBAR ============================== */
 .navbar {
   grid-area: navbar;
   display: flex;
@@ -158,28 +157,136 @@ body {
 .sidebar {
   grid-area: sidebar;
   background-color: #f8f9fa;
-  padding: 20px;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
-  height: 100%;
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.side-links {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.side-links ul {
+  padding: 0;
+  margin: 0;
+}
+
+.side-links li {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.side-links a {
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.side-links a:hover {
+  color: #007bff;
+}
+
+.bottom-items {
+  margin-top: auto; 
+  padding-top: 20px;
+  padding: 20px;
+}  
 
 
 
 
-/* === MAIN CONTENT === */
+
+
+
+
+
+
+
+/* ====================== MAIN ============================== */
 .main {
   grid-area: main;
   padding: 20px;
   background-color: #fff;
-  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
 }
+
+.announcement-section {
+  grid-column: 3/4;
+  grid-row: 1/4 ;
+  padding: 8px;
+  padding-top: 1px;
+  height: fit-content;
+ 
+
+}
+
+.announcements-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  
+  
+}
+
+.announcement-item {
+  margin-bottom: 3px; 
+  margin-top: 10px;
+   border: 1px solid black;
+}
+
+.announcement-item p{
+  margin: 3px; 
+}
+
+.announcement-date{
+  color:cornflowerblue; 
+}
+
+.announcement-divider {
+  margin: 4px 0;
+}
+
+.edit-announcement-btn {
+  text-decoration: none;
+  color: #111;
+  border: 1px solid black;
+  background-color: cornflowerblue;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+ 
+}
+
+.edit-announcement-btn:hover{
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* === CALENDAR === */
 .calendar {
-  width: 500px;
+  width: 480px;
   max-width: 100%;
-  margin: auto;
-  height: 320px;
+  height: 280px;
   overflow: hidden;
 }
