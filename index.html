@@ -4,42 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <!-- Use Font Awesome 6+ for correct icon support -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
     <title>Admin-Dashboard</title>
 </head>
 <body>
+  <div class="layout">
     <header class="header">
-      <div class="logo"> 
-        <img src="#" alt="Your Company Logo" class="logo-image"> 
+  <nav class="navbar">
+    <div class="navbar-top">
+      <div class="logo">
+        <img src="supporting-materials/logo.jpg" alt="Company-Logo"><h2>Kompany</h2>
       </div>
-      <nav class="navbar">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#">Courses</a></li>
-          <li class="nav-item"><a href="#">Dashboard</a></li>
-          <li class="nav-item"><a href="#">Messages</a></li>
-          <li class="nav-item"><a href="#">Manage Users</a></li>
-        </ul>
-        <div class="right-nav">
+      <div class="right-nav">
+        <div class="search-and-notification">
           <div class="search-bar">
-            <input type="text" placeholder="SEARCH" aria-label="Search">
-            <i class="fa fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search..." aria-label="search-bar" />
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <div class="notification-icon">
-            <i class="fa fa-bell" aria-label="Notifications"></i>
-          </div>
-          <div class="user-icon">
-            <img src="#" alt="User Profile Picture">
-            <h3 class="user-name">Abdullah</h3>
+            <i class="fa fa-bell fa-xl" aria-label="Notifications"></i>
           </div>
         </div>
-      </nav>
-    </header>
+        <div class="user-icon">
+          <img src="supporting-materials/avatar.webp" alt="User Profile Picture">
+          <h3 class="user-name">Abdullah</h3>
+        </div>
+      </div>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#">Courses</a></li>
+      <li class="nav-item"><a href="#">Dashboard</a></li>
+      <li class="nav-item"><a href="#">Students</a></li>
+      <li class="nav-item"><a href="#">Questions</a></li>
+      <li class="nav-item"><a href="#">Reports</a></li>
+    </ul>
+  </nav>
+</header>
+
+
 
     <aside class="sidebar">
-        <h2 class="sidebar-greet">Hello, Abdullah!</h2>
+        <h2 class="sidebar-greet">Welcome, Admin</h2>
         <div class="side-links">
             <ul class="side-list">
               <li class="side-list-item"><a href="#">Home</a></li>
@@ -108,13 +116,6 @@
                 <div class="label">Total Comments</div>
               </div>
             </div>
-            <div class="card">
-              <span class="icon"><i class="fa-solid fa-layer-group"></i></span>
-              <div class="info">
-                <div class="number blue">22</div>
-                <div class="label">Subjects</div>
-              </div>
-            </div>
         </div>
 
         <section class="announcements-section">
@@ -174,6 +175,7 @@
   </div>
 </section>
     </main>
+    </div>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
