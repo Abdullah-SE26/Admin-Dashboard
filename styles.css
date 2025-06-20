@@ -21,7 +21,7 @@ body {
 /* === SIDEBAR === */
 .sidebar {
   grid-area: sidebar;
-  background-color: #f8f9fa;
+  background-color: gainsboro;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -52,17 +52,22 @@ body {
   align-items: center;
   gap: 12px;
   font-size: 1rem;
-  transition: color 0.2s ease;
+  padding: 5px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 
 .side-links a:hover {
   color: #007bff;
+  background-color: #e9f3ff;
 }
 
 .bottom-items {
-  margin-top: auto;
-  padding: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
 }
+
 
 /* === NAVBAR === */
 .navbar {
@@ -96,7 +101,7 @@ body {
 }
 
 .logo h2 {
-  color: lightcoral;
+  color: royalblue;
 }
 
 .right-nav {
@@ -159,7 +164,7 @@ body {
   border-radius: 40px;
   padding: 5px 100px;
   list-style: none;
-  margin: 15px auto 0 auto;
+  margin: 15px auto 10px auto;
   width: fit-content;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
@@ -191,29 +196,27 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto 1fr;
-  gap: 8px;
-  padding: 20px;
+  gap: 5px;
+  padding: 15px;
   overflow-y: auto;
+  background-color:white ;
 }
 
 /* === DASHBOARD CARDS === */
 .dashboard-cards {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: center;
 }
 
 .card {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
+  width: 120px;
   align-items: center;
   text-align: center;
   padding: 8px;
@@ -223,6 +226,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 255, 0.15);
   transition: transform 0.2s, box-shadow 0.2s;
+
 }
 
 .card:hover {
@@ -249,18 +253,22 @@ body {
 .announcement-section {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  background-color: #fdfdfd;
+  background-color: gainsboro;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .section-header {
   font-size: 1.1rem;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.announcements-card {
+.announcement-card {
   max-height: 180px;
   overflow-y: auto;
 }
@@ -270,7 +278,7 @@ body {
 }
 
 .announcement-date {
-  color: cornflowerblue;
+  color: royalblue;
   font-size: 0.85rem;
 }
 
@@ -288,26 +296,33 @@ body {
   border: 1px solid cornflowerblue;
   border-radius: 6px;
   transition: background-color 0.2s;
+  text-decoration: none;
 }
 
 .edit-announcement-btn:hover {
   background-color: black;
 }
 
+
 /* === PENDING APPROVALS === */
 .pending-approvals-section {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background-color: #fdfdfd;
+  background-color: gainsboro;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.section-header {
+  font-size: 1.1rem;
+  margin-top: -20px;
+}
+
 .approval-item {
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .approval-meta {
@@ -316,7 +331,7 @@ body {
 }
 
 .approval-divider {
-  margin: 6px 0;
+  margin: 2px 0;
   border: none;
   border-top: 1px dashed #ccc;
 }
@@ -330,6 +345,7 @@ body {
   padding: 6px 12px;
   border-radius: 6px;
   transition: background-color 0.2s;
+  text-decoration: none;
 }
 
 .go-to-approvals-btn:hover {
@@ -347,4 +363,5 @@ body {
   padding: 12px;
   border: 1px solid #ccc;
   overflow: hidden;
+  margin-top: -20px;
 }
